@@ -1,0 +1,77 @@
+Pregunta 1	
+Explica con tus propias palabras que es un REST API Server
+R:// 
+
+Es una arqitectura basada en bajo REST y su manera de crear, manejar e implementar filtros, de poder usarlos en la nube usando los servicios de REST web y ademas nos ayuda a poder crear paginas web sencillas. Se basa exclusivamente en tecnologia web.
+
+
+Pregunta 2	
+Consume el API REST https://hardware-examen.herokuapp.com/equipo-portatils y realiza un GET utilizando los filtros de loopback4. Ordena los resultados de Memoria Cache L1, L2 y L3 de forma ascendente. Enviar la URL resultante
+
+R:// 
+
+https://hardware-examen.herokuapp.com/equipo-portatils?filter=%7B%0A%20%20%22fields%22%3A%7B%0A%20%20%20%20%22fabricante%22%3Atrue,%0A%20%20%20%20%22modelo%22%3Atrue,%0A%20%20%22cacheL1%22%3A%20true,%0A%20%20%20%20%22cacheL2%22%3A%20true,%0A%20%20%20%20%22cacheL3%22%3A%20true%0A%20%20%7D%0A%20%20,%22order%22%3A%22Modelo%20ASC%22%0A%7D
+
+
+
+
+Pregunta 3 	
+En la jerarquía de memoria existirá siempre la contraparte de capacidad vrs velocidad más costo y viceversa. Mientras tanto siempre se recomienda encontrar un equilibrio.
+R:// 
+
+Verdadero
+
+
+Pregunta 4	
+Consume el API REST https://hardware-examen.herokuapp.com/equipo-portatils y realiza un GET utilizando los filtros de loopback4. Omitir las primeras 4 equipos del listado. Enviar la URL resultante
+
+
+R:// 
+
+pregunta 5	
+Consume el API REST https://hardware-examen.herokuapp.com/equipo-portatils y realiza un GET utilizando los filtros de loopback4. Limita el resultado a solo 5 registros. Enviar la URL resultante
+
+R:// 
+
+https://hardware-examen.herokuapp.com/equipo-portatils?filter=%7B%0A%20%20%0A%20%20%22skip%22%3A%204%2C%0A%20%20%22order%22%3A%20%22string%22%2C%0A%20%20%22where%22%3A%20%7B%0A%20%20%20%20%22additionalProp1%22%3A%20%7B%7D%0A%20%20%7D%2C%0A%20%20%22fields%22%3A%20%7B%0A%20%20%20%20%22id%22%3A%20true%2C%0A%20%20%20%20%22fabricante%22%3A%20true%2C%0A%20%20%20%20%22modelo%22%3A%20true%2C%0A%20%20%20%20%22serviceTag%22%3A%20true%2C%0A%20%20%20%20%22ram%22%3A%20true%2C%0A%20%20%20%20%22procesadorMarca%22%3A%20true%2C%0A%20%20%20%20%22procesadorGeneracion%22%3A%20true%2C%0A%20%20%20%20%22procesadorFq%22%3A%20true%2C%0A%20%20%20%20%22cacheL1%22%3A%20true%2C%0A%20%20%20%20%22cacheL2%22%3A%20true%2C%0A%20%20%20%20%22cacheL3%22%3A%20true%2C%0A%20%20%20%20%22discoDuro%22%3A%20true%2C%0A%20%20%20%20%22discoDuroUnidad%22%3A%20true%2C%0A%20%20%20%20%22pantalla%22%3A%20true%2C%0A%20%20%20%20%22color%22%3A%20true%0A%20%20%7D%0A%7D
+
+
+Pregunta 6
+Consume el API REST https://hardware-examen.herokuapp.com/equipo-portatils y realiza un GET utilizando los filtros de loopback4. Muestra solamente los campos fabricante, modelo, pantalla y color. Enviar la URL resultante
+
+R:// 
+
+https://hardware-examen.herokuapp.com/equipo-portatils?filter=%7B%0A%20%20%22fields%22%3A%7B%0A%20%20%22fabricante%22%3Atrue,%0A%20%20%20%20%22modelo%22%3Atrue,%0A%20%20%20%20%22pantalla%22%3Atrue,%0A%20%20%20%20%22color%22%3Atrue%0A%20%20%7D%0A%7D
+
+
+
+
+Pregunta 7
+Consume el API REST https://hardware-examen.herokuapp.com/equipo-portatils y realiza un GET utilizando los filtros de loopback4. Muestra solo los equipos con disco SSD. Enviar URL resultante.
+
+R:// 
+
+
+Pregunta 8
+Consume el API REST https://hardware-examen.herokuapp.com/equipo-portatils y realiza un GET utilizando los filtros de loopback4. Muestra solamente los campos fabricante, modelo, disco duro, procesadorMarca y procesadorGeneracion. Enviar la URL resultante
+
+
+R:// 
+
+https://hardware-examen.herokuapp.com/equipo-portatils?filter=%7B%0A%20%20%22fields%22%3A%20%7B%0A%20%20%20%20%22fabricante%22%3A%20true,%0A%20%20%20%20%22modelo%22%3A%20true,%0A%20%20%20%20%22procesadorMarca%22%3A%20true,%0A%20%20%20%20%22procesadorGeneracion%22%3A%20true,%0A%20%20%20%20%22discoDuro%22%3A%20true%0A%20%20%7D%0A%7D
+
+	
+pregunta 9
+Consume el API REST https://hardware-examen.herokuapp.com/equipo-portatils y realiza un GET utilizando los filtros de loopback4. Muestra solo los equipos con procesador entre generación 9 y 11. Enviar URL resultante.
+
+R://  
+
+https://hardware-examen.herokuapp.com/equipo-portatils?filter=%7B%0A%20%20%22fields%22%3A%7B%0A%20%20%20%20%22fabricante%22%3Atrue,%0A%20%20%20%20%22modelo%22%3Atrue,%0A%20%20%20%20%22procesadorGeneracion%22%3A%20true%0A%20%20%7D%0A%20%20,%22where%22%3A%7B%22procesadorGeneracion%22%3A%7B%22gte%22%3A9%7D%7D%0A%7D
+
+
+pregunta 10
+Consume el API REST https://hardware-examen.herokuapp.com/equipo-portatils y realiza un GET utilizando los filtros de loopback4. Muestra solo los equipos mayor o igual 6 GB de RAM. Enviar URL resultante.
+
+R:// 
+
+https://hardware-examen.herokuapp.com/equipo-portatils?filter=%7B%0A%20%20%22fields%22%3A%7B%0A%20%20%20%20%22fabricante%22%3Atrue,%0A%20%20%20%20%22modelo%22%3Atrue,%0A%20%20%22ram%22%3Atrue%0A%20%20%20%20%0A%7D%0A%20%20,%22where%22%3A%7B%22ram%22%3A%7B%22gte%22%3A6%7D%7D%0A%7D
